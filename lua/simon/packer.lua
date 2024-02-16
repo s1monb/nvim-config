@@ -18,7 +18,18 @@ return require('packer').startup(function(use)
   })
 	
   use('gauteh/vim-norway')
-  
+
+  -- Default settings: https://github.com/zbirenbaum/copilot.lua?tab=readme-ov-file#setup-and-configuration
+  use({ "zbirenbaum/copilot.lua", cmd = "Copilot", event = "InsertEnter", config = function()
+    require("copilot").setup({
+        suggestion = {
+            auto_trigger = true,
+            keymap = {
+                accept = "<Right>",
+            }
+        }
+    })
+  end})
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use("theprimeagen/harpoon")
   use("mbbill/undotree")
