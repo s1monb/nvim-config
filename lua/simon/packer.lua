@@ -25,7 +25,7 @@ return require('packer').startup(function(use)
         suggestion = {
             auto_trigger = true,
             keymap = {
-                accept = "<Right>",
+                accept = "<leader><Right>",
             }
         }
     })
