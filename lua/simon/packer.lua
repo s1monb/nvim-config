@@ -27,6 +27,10 @@ return require('packer').startup(function(use)
             keymap = {
                 accept = "<leader><Right>",
             }
+        },
+        filetypes = {
+            yaml = true,
+            makrdown = true,
         }
     })
   end})
